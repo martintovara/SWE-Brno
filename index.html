@@ -3,12 +3,18 @@
 
 <head>
   <meta charset="utf-8">
-  <title>SWE Brno</title>
+  <title>SWE Brno Affiliate</title>
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
   <script src="https://kit.fontawesome.com/b0fb217637.js" crossorigin="anonymous"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,27 +30,33 @@
 </head>
 
 <body>
-  <div id="particles-js" class="div-particles w-100 h-100"></div>
-  <div class="sticky-top position-fixed w-100">
+  <div id="particles-js" class="div-particles w-100 h-100" style="min-width: 576px;"></div>
+  <div class="sticky-top banner-div" style="box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15);">
     <div class="bg-light banner">
+      <div class="row row-cols-1 low-banner-row align-content-center">
+        <div class="col-auto">
+          <img src="img/swe_logo.png" alt="swe-logo" class="float-start logo" draggable="false">
+        </div>
+      </div>
       <div class="row row-cols-3 banner-row">
         <div class="col-5 col-lg-4 d-flex align-items-center">
           <img src="img/swe_logo.png" alt="swe-logo" class="float-start logo" draggable="false">
         </div>
         <div class="col-2 col-lg-4 text-center d-flex justify-content-center align-items-center title">
           <h1 class="title">
-            <span class="swe">
+            <span class="swe disable-select">
               <span style="font-size: 48pt;"><span style="color: #dbc553">S</span>W<span style="color: #aaa;">E</span></span> &nbsp;<span class="swe-brno">Brno&nbsp;Affiliate</span>
             </span>
           </h1>
         </div>
         <div class="col-5 col-lg-4 d-flex flex-column h-100">
-          <div class="row row-cols-3 socials justify-content-end">
+          <div class="row row-cols-4 socials justify-content-end">
+            <div class="col-auto"><a href="mailto:SWE.BrnoAffiliate@gmail.com"><i class="fa-solid fa-envelope"></i></a></div>
             <div class="col-auto"><a href="http://www.facebook.com/pages/Society-of-Women-Engineers/29752126120"><i class="fa-brands fa-square-facebook"></i></a></div>
-            <div class="col-auto"><a href="http://twitter.com/#!/swetalk"><i class="fa-brands fa-square-twitter"></i></a></div>
+            <div class="col-auto"><a href="https://twitter.com/swetalk?lang=cs"><i class="fa-brands fa-square-twitter"></i></a></div>
             <div class="col-auto"><a href="http://www.linkedin.com/groups?home=&gid=69390"><i class="fa-brands fa-linkedin"></i></a></div>
           </div>
-          <div class="row row-cols-auto justify-content-end mt-auto">
+          <div class="row row-cols-auto justify-content-end mt-auto disable-select">
             <div class="swe-hrefs pt-2 align-items-center">
               <a href="https://swe.org/join" class="p-2">Join SWE Today</a> | <a class="p-2" href="https://swe.org">SWE.org</a>
             </div>
@@ -52,12 +64,12 @@
         </div>
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-border">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-border disable-select">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbar">
+        <div class="collapse navbar-collapse justify-content-center menu" id="navbar">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item mx-3">
               <a class="nav-link active" aria-current="page" href="#home">Domů</a>
@@ -66,7 +78,7 @@
               <a class="nav-link active" aria-current="page" href="#aboutSWE">O SWE</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link active" aria-current="page" href="#SWEBrno">SWE Brno Affilate</a>
+              <a class="nav-link active" aria-current="page" href="#SWEBrno">SWE Brno Affiliate</a>
             </li>
             <li class="nav-item mx-3">
               <a class="nav-link active" aria-current="page" href="#contact">Kontakt</a>
@@ -196,9 +208,9 @@
           <!-- Události -->
           <h1 class="section-name border-bottom mb-4">Události</h1>
           <div class="container-fluid pb-3">
-            <h3 class="article-header mb-2">Nadcházející a aktuální události</h3>
+            <h3 class="article-header mb-3">Aktuální a nadcházející události</h3>
             <div class="row d-flex justify-content-evenly">
-              <div class="card p-3 m-2 mb-3">
+              <div class="card p-3">
                 <div class="card-img">
                   <img class="card-img-top" src="img/events/6.png" alt="Card image">
                 </div>
@@ -209,10 +221,11 @@
                 </div>
               </div>
             </div>
+
             <hr class="hr-events mt-5">
-            <h3 class="article-header mb-2 mt-2">Proběhlé události</h3>
-            <div class="row d-flex justify-content-evenly">
-              <div class="card p-3 m-2 mb-3">
+            <h3 class="article-header mb-2 mt-2 mb-3">Proběhlé události</h3>
+            <div class="row d-flex justify-content-center gap-4 gy-3">
+              <div class="card p-3">
                 <div class="card-img">
                   <img class="card-img-top" src="img/events/1.jpg" alt="Card image">
                 </div>
@@ -223,7 +236,7 @@
                 </div>
               </div>
 
-              <div class="card p-3 m-2 mb-3">
+              <div class="card p-3">
                 <div class="card-img">
                   <img class="card-img-top" src="img/events/2.jpg" alt="Card image">
                 </div>
@@ -234,7 +247,7 @@
                 </div>
               </div>
 
-              <div class="card p-3 m-2 mb-3">
+              <div class="card p-3">
                 <div class="card-img">
                   <img class="card-img-top" src="img/events/3.jpg" alt="Card image">
                 </div>
@@ -245,7 +258,7 @@
                 </div>
               </div>
 
-              <div class=" card p-3 m-2 mb-3">
+              <div class=" card p-3">
                 <div class="card-img">
                   <img class="card-img-top" src="img/events/4.jpg" alt="Card image">
                 </div>
@@ -257,7 +270,7 @@
                 </div>
               </div>
 
-              <div class="card p-3 m-2 mb-3">
+              <div class="card p-3">
                 <div class="card-img">
                   <img class="card-img-top" src="img/events/5.jpg" alt="Card image">
                 </div>
@@ -345,10 +358,10 @@
 
       <div class="main-content text-center page-divider" id="SWEBrno">
         <section class="section-content p-5">
-          <h1 class="section-name border-bottom mb-4">SWE Brno Affilate</h1>
+          <h1 class="section-name border-bottom mb-4">SWE Brno Affiliate</h1>
           <div class="article container shadow mb-5">
             <div class="d-flex justify-content-center text-center p-2">
-              <h3 class="article-header">Mise a poslání SWE Brno Affilate</h3>
+              <h3 class="article-header">Mise a poslání SWE Brno Affiliate</h3>
             </div>
             <div class="container text-start article-content">
               <div class="row">
@@ -379,22 +392,21 @@
                     <li>Tereza Toufarová</li>
                     <li>Jarmila Nováková</li>
                   </ul>
-
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="article container shadow mb-5">
+          <div class="article container mb-5">
             <div class="d-flex justify-content-center text-center p-2">
               <h3 class="article-header">Členové</h3>
             </div>
             <div class="container text-start article-content">
-              <div class="row justify-content-evenly">
+              <div class="row justify-content-center gap-4 gy-3">
 
-                <div class="card p-3 m-2 mb-3">
-                  <div class="card-img">
-                    <img class="card-img-top" src="img/woman.png" alt="Card image">
+                <div class="card p-3 card-profile">
+                  <div class=" card-img">
+                    <img class="card-img-top" src="" alt="Card image - woman" id="card-profile-1">
                   </div>
                   <div class="card-body text-center">
                     <h5 class="card-title">Joan Ferrell</h5>
@@ -403,9 +415,9 @@
                   </div>
                 </div>
 
-                <div class="card p-3 m-2 mb-3">
+                <div class="card p-3 card-profile">
                   <div class="card-img">
-                    <img class="card-img-top" src="img/woman.png" alt="Card image">
+                    <img class="card-img-top" src="" alt="Card image - woman" id="card-profile-2">
                   </div>
                   <div class="card-body text-center">
                     <h5 class="card-title">Dana Embree</h5>
@@ -414,9 +426,9 @@
                   </div>
                 </div>
 
-                <div class="card p-3 m-2 mb-3">
+                <div class="card p-3 card-profile">
                   <div class="card-img">
-                    <img class="card-img-top" src="img/woman.png" alt="Card image">
+                    <img class="card-img-top" src="" alt="Card image - woman" id="card-profile-3">
                   </div>
                   <div class="card-body text-center">
                     <h5 class="card-title">Sara Mostafa</h5>
@@ -425,9 +437,9 @@
                   </div>
                 </div>
 
-                <div class="card p-3 m-2 mb-3">
+                <div class="card p-3 card-profile">
                   <div class="card-img">
-                    <img class="card-img-top" src="img/woman.png" alt="Card image">
+                    <img class="card-img-top" src="" alt="Card image - woman" id="card-profile-4">
                   </div>
                   <div class="card-body text-center">
                     <h5 class="card-title">Iveta Horrová</h5>
@@ -436,9 +448,9 @@
                   </div>
                 </div>
 
-                <div class="card p-3 m-2 mb-3">
+                <div class="card p-3 card-profile">
                   <div class="card-img">
-                    <img class="card-img-top" src="img/woman.png" alt="Card image">
+                    <img class="card-img-top" src="" alt="Card image - woman" id="card-profile-5">
                   </div>
                   <div class="card-body text-center">
                     <h5 class="card-title">Tereza Toufarová</h5>
@@ -447,9 +459,9 @@
                   </div>
                 </div>
 
-                <div class="card p-3 m-2 mb-3">
+                <div class="card p-3 card-profile">
                   <div class="card-img">
-                    <img class="card-img-top" src="img/woman.png" alt="Card image">
+                    <img class="card-img-top" src="" alt="Card image - woman" id="card-profile-6">
                   </div>
                   <div class="card-body text-center">
                     <h5 class="card-title">Jarmila Nováková</h5>
@@ -458,9 +470,9 @@
                   </div>
                 </div>
 
-                <div class="card p-3 m-2 mb-3">
+                <div class="card p-3 card-profile">
                   <div class="card-img">
-                    <img class="card-img-top" src="img/woman.png" alt="Card image">
+                    <img class="card-img-top" src="" alt="Card image - woman" id="card-profile-7">
                   </div>
                   <div class="card-body text-center">
                     <h5 class="card-title">Michaela Holečková</h5>
@@ -469,9 +481,9 @@
                   </div>
                 </div>
 
-                <div class="card p-3 m-2 mb-3">
+                <div class="card p-3 card-profile">
                   <div class="card-img">
-                    <img class="card-img-top" src="img/man.jpg" alt="Card image">
+                    <img class="card-img-top" src="" alt="Card image - man" id="card-profile-8">
                   </div>
                   <div class="card-body text-center">
                     <h5 class="card-title">Miloš Kováč</h5>
@@ -483,6 +495,9 @@
               </div>
             </div>
           </div>
+          <script>
+            setSrcProfileCards();
+          </script>
         </section>
 
         <div class="main-content text-center page-divider">
@@ -558,26 +573,21 @@
         <div class="main-content text-center page-divider" id="contact">
           <section class="section-content p-5">
             <h1 class="section-name border-bottom mb-4">Kontakt</h1>
-            <div class="container shadow p-3">
-              <div class="row justify-content-evenly">
-                <div class="col-auto mb-3 w-50">
-                  <img src="img/members.jpeg" alt="Members" class="w-75 p-2 shadow-lg" style="border-radius: 10px;">
+            <div class="container p-3">
+              <div class="row justify-content-center">
+                <div class="col-11 mb-3 members p-2 shadow">
+                  <figure>
+                    <img src="img/members.jpeg" alt="Members" class="shadow w-100" style="border-radius: 10px;">
+                    <figcaption class="justify-content-center pt-4">
+                      <span class="fw-light" style="cursor: pointer;" data-toggle="tooltip" data-placement="top" title="Kliknutím zkopírovat emailovou adresu" onclick="copyEmail();" id="email">SWE.BrnoAffiliate@gmail.com</span>
+                    </figcaption>
+                  </figure>
                 </div>
-              </div>
-              <div class="row justify-content-evenly mt-3">
-                <div class="col-auto" style="min-width: 30%;">
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="emailIcon">@</span>
-                    </div>
-                    <input type="text" class="form-control" value="SWE.BrnoAffiliate@gmail.com" id="email" readonly>
-                  </div>
-                </div>
-              </div>
-              <div class="row justify-content-center contact-icons m-3 p-3">
-                <div class="col-auto">
-                  <a href="mailto:SWE.BrnoAffiliate@gmail.com" class="m-3" data-toggle="tooltip" data-placement="top" title="Kontaktuje nás skrze náš email!"><i class="fa-solid fa-envelope"></i></a>
-                  <a href="https://www.facebook.com/SWEBrno" target="_blank" class="m-3" data-toggle="tooltip" data-placement="top" title="Kontaktujte nás na našem Facebooku!"><i class="fa-brands fa-facebook"></i></a>
+                <div class="col-1 mb-3 p-2 contact-icons justify-content-center gy-5">
+                  <div><a href="mailto:SWE.BrnoAffiliate@gmail.com" class="m-3" data-toggle="tooltip" data-placement="top" title="Kontaktuje nás skrze náš email!"><i class="fa-solid fa-envelope"></i></a></div>
+                  <div><a href="https://www.facebook.com/SWEBrno" target="_blank" class="m-3" data-toggle="tooltip" data-placement="top" title="Kontaktujte nás na našem Facebooku!"><i class="fa-brands fa-square-facebook"></i></a></div>
+                  <div><a href="https://twitter.com/swetalk?lang=cs" class="m-3"><i class="fa-brands fa-square-twitter"></i></a></div>
+                  <div><a href="http://www.linkedin.com/groups?home=&gid=69390" class="m-3"><i class="fa-brands fa-linkedin"></i></a></div>
                 </div>
               </div>
             </div>
