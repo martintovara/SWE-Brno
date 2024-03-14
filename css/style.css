@@ -91,7 +91,7 @@ h3 {
     background-position: center center;
     -webkit-background-size: cover;
     background-size: cover;
-    font-family: "Kanit", sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 .banner-row {
@@ -399,6 +399,14 @@ h3 {
     user-select: none;
 }
 
+.competitionHref {
+    color: black;
+}
+
+.competitionHref:hover {
+    text-shadow: 0px 0px 1px black;
+}
+
 @media screen and (max-width: 992px) {
     .title {
         display: none;
@@ -421,13 +429,13 @@ h3 {
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 759px) {
     .banner-row {
         display: none;
     }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 760px) {
     .low-banner-row {
         display: none;
     }

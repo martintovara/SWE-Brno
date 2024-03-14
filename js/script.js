@@ -98,7 +98,7 @@ function makeToastWithMailto(text, duration, email) {
 }
 
 function menuHighlight() {
-    let pages = ["home", "aboutSWE", "SWEBrno", "contact"];
+    let pages = ["home", "aboutSWE", "SWEBrno", "sheAward", "contact"];
     for (let i = 0; i < pages.length; i++) {
         if (partInViewport(pages[i]) && getViewPercentage(pages[i]) > 49) {
             let active = document.getElementsByClassName("menu-item-active");
