@@ -1,3 +1,5 @@
+var current = "#home";
+
 function swalFireMore(nb) {
     Swal.fire({
         title: events[nb].title + " (" + events[nb].date + ")",
@@ -74,7 +76,6 @@ function copyEmail() {
     const email = document.getElementById("email").innerHTML;
     navigator.clipboard.writeText(email);
     makeToastWithMailto("Email byl zkopírován do schránky", 5000, email);
-
 }
 
 function makeToastWithMailto(text, duration, email) {
@@ -94,4 +95,84 @@ function makeToastWithMailto(text, duration, email) {
             window.location.href = "mailto:" + email;
         } // Callback after click
     }).showToast();
+}
+
+function menuHighlight() {
+    let pages = ["home", "aboutSWE", "SWEBrno", "contact"];
+    for (let i = 0; i < pages.length; i++) {
+        if (partInViewport(pages[i]) && getViewPercentage(pages[i]) > 49) {
+            let active = document.getElementsByClassName("menu-item-active");
+            if (active[0]) {
+                active[0].classList.remove("menu-item-active");
+            }
+
+            current = "index#" + pages[i];
+
+            document.getElementById("nav-" + pages[i]).classList.add("menu-item-active");
+        } else {
+
+
+        }
+    }
+}
+
+function partInViewport(id) {
+    let elem = document.getElementById(id);
+    let x = elem.getBoundingClientRect().left;
+    let y = elem.getBoundingClientRect().top;
+    let ww = Math.max(document.documentElement.clientWidth, window.innerWidth);
+    let hw = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    let w = elem.clientWidth;
+    let h = elem.clientHeight;
+
+    return (
+        (y < hw &&
+            y + h > 0) &&
+        (x < ww &&
+            x + w > 0)
+    );
+}
+
+function getViewPercentage(id) {
+    let element = document.getElementById(id);
+
+    const viewport = {
+        top: window.pageYOffset,
+        bottom: window.pageYOffset + window.innerHeight
+    };
+
+    const elementBoundingRect = element.getBoundingClientRect();
+    const elementPos = {
+        top: elementBoundingRect.y + window.pageYOffset,
+        bottom: elementBoundingRect.y + elementBoundingRect.height + window.pageYOffset
+    };
+
+    if (viewport.top > elementPos.bottom || viewport.bottom < elementPos.top) {
+        return 0;
+    }
+
+    // Element is fully within viewport
+    if (viewport.top < elementPos.top && viewport.bottom > elementPos.bottom) {
+        return 100;
+    }
+
+    // Element is bigger than the viewport
+    if (elementPos.top < viewport.top && elementPos.bottom > viewport.bottom) {
+        return 100;
+    }
+
+    const elementHeight = elementBoundingRect.height;
+    let elementHeightInView = elementHeight;
+
+    if (elementPos.top < viewport.top) {
+        elementHeightInView = elementHeight - (window.pageYOffset - elementPos.top);
+    }
+
+    if (elementPos.bottom > viewport.bottom) {
+        elementHeightInView = elementHeightInView - (elementPos.bottom - viewport.bottom);
+    }
+
+    const percentageInView = (elementHeightInView / window.innerHeight) * 100;
+
+    return Math.round(percentageInView);
 }

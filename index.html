@@ -29,7 +29,7 @@
   <script src="js/script.js"></script>
 </head>
 
-<body>
+<body onscroll="menuHighlight();">
   <div id="particles-js" class="div-particles w-100 h-100" style="min-width: 576px;"></div>
   <div class="sticky-top banner-div" style="box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15);">
     <div class="bg-light banner">
@@ -71,17 +71,17 @@
         </button>
         <div class="collapse navbar-collapse justify-content-center menu" id="navbar">
           <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item mx-3">
-              <a class="nav-link active" aria-current="page" href="#home">Domů</a>
+            <li class="nav-item mx-3 menu-item-active">
+              <a class="nav-link active" aria-current="page" href="#home" id="nav-home">Domů</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link active" aria-current="page" href="#aboutSWE">O SWE</a>
+              <a class="nav-link active" aria-current="page" href="#aboutSWE" id="nav-aboutSWE">O SWE</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link active" aria-current="page" href="#SWEBrno">SWE Brno Affiliate</a>
+              <a class="nav-link active" aria-current="page" href="#SWEBrno" id="nav-SWEBrno">SWE Brno Affiliate</a>
             </li>
             <li class="nav-item mx-3">
-              <a class="nav-link active" aria-current="page" href="#contact">Kontakt</a>
+              <a class="nav-link active" aria-current="page" href="#contact" id="nav-contact">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -91,9 +91,9 @@
   <div class="container-fluid middle h-100">
     <div class="container main d-flex flex-column">
       <div class="main-content text-center" id="home">
-        <section class="section-content p-5">
+        <section class="section-content p-5"">
           <!-- AKTUALITY -->
-          <h1 class="section-name border-bottom mb-4">Aktuality</h1>
+          <h1 class=" section-name border-bottom mb-4">Aktuality</h1>
 
           <div class="article container shadow">
             <div class="d-flex justify-content-center text-center p-2">
