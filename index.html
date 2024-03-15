@@ -29,7 +29,7 @@
   <script src="js/script.js"></script>
 </head>
 
-<body onscroll="menuHighlight();" onload="menuHighlight();">
+<body onscroll="menuHighlight();" onload="menuHighlight(); setMarginMain();" onresize="setMarginMain();">
   <div id="particles-js" class="div-particles w-100 h-100" style="min-width: 576px;"></div>
   <div class="sticky-top banner-div" style="box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15);">
     <div class="bg-light banner">
@@ -99,7 +99,7 @@
           <h1 class=" section-name border-bottom mb-4">Aktuality</h1>
 
           <div class="article container shadow">
-            <div class="d-flex justify-content-center text-center p-2">
+            <div class="d-flex justify-content-center text-center p-3">
               <h3 class="article-header">Soutěž SHE STEM Award</h3>
             </div>
             <div class="p-2 container justify-content-center text-start article-content">
@@ -294,7 +294,7 @@
           <h1 class="section-name border-bottom mb-4">O SWE</h1>
 
           <div class="article container shadow mb-5">
-            <div class="d-flex justify-content-center text-center p-2">
+            <div class="d-flex justify-content-center text-center p-3">
               <h3 class="article-header">Mise society of women engineers</h3>
             </div>
             <div class="container text-start article-content">
@@ -363,7 +363,7 @@
         <section class="section-content p-5">
           <h1 class="section-name border-bottom mb-4">SWE Brno Affiliate</h1>
           <div class="article container shadow mb-5">
-            <div class="d-flex justify-content-center text-center p-2">
+            <div class="d-flex justify-content-center text-center p-3">
               <h3 class="article-header">Mise a poslání SWE Brno Affiliate</h3>
             </div>
             <div class="container text-start article-content">
@@ -378,7 +378,7 @@
           </div>
 
           <div class="article container shadow mb-5">
-            <div class="d-flex justify-content-center text-center p-2">
+            <div class="d-flex justify-content-center text-center p-3">
               <h3 class="article-header">Historie</h3>
             </div>
             <div class="container text-start article-content">
@@ -503,83 +503,13 @@
           </script>
         </section>
 
-        <div class="main-content text-center page-divider">
-          <section class="section-content p-5">
-            <h1 class="section-name border-bottom mb-4">O SWE</h1>
-
-            <div class="article container shadow mb-5">
-              <div class="d-flex justify-content-center text-center p-2">
-                <h3 class="article-header">Mise society of women engineers</h3>
-              </div>
-              <div class="container text-start article-content">
-                <div class="row">
-                  <div class="col-auto p-3 article-text border-0">
-                    <p>
-                      Povzbudit ženy k získání plného potenciálu v kariéře inženýrek a vedoucích pracovnic, rozšíření povědomí o inženýrské profesi jako pozitivní síle ve zlepšování kvality života a demonstrování hodnoty diverzity
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="article container shadow mb-5">
-              <div class="d-flex justify-content-center text-center p-2">
-                <h3 class="article-header">O organizaci SWE</h3>
-              </div>
-              <div class="container text-start article-content">
-                <div class="row">
-                  <div class="col-auto p-3 article-text border-0">
-                    <p>
-                      Society of Women Engineers (SWE) je světově nejrozsáhlejší obhájce a zastánce změn pro ženy v inženýrství a technologických oborech. Nezisková vzdělávací organizace je hnací silou prosazují inženýrství jako ženami vysoce žádanou kariérní aspiraci.
-                    </p>
-                    <p>
-                      SWE nabízí jedinečné příležitosti k seznámení, poskytuje možnosti profesionálního růstu, podporuje formování veřejné politiky a také projevuje uznání za úspěchy inženýrek a přispívá ke změnám okolního dění, čímž zajišťuje, aby její členové dosáhli plného potenciálu jako inženýři, inženýrky a vedoucí.
-                    </p>
-                    <p>
-                      Jako vedoucí síla v diverzitě, SWE podporuje ženy v dosažení úspěchu a pokroku v profesním životě.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="article container shadow mb-5">
-              <div class="d-flex justify-content-center text-center p-2">
-                <h3 class="article-header">Kariérní benefity</h3>
-              </div>
-              <div class="container text-start article-content">
-                <div class="row">
-                  <div class="col-auto p-3 article-text border-0">
-                    <h4 class="article-header">Pokrok v karéře</h4>
-                    <p>
-                      Díky SWE se inženýrky mohou spojit s inženýrskými a technologickými organizacemi hledajícími kvalifikované kandidáty.
-                    </p>
-                    <p>
-                      SWE Career Center je elektronický personální portál nabízející pracovní pozice na poli inženýrství a technologií.
-                    </p>
-                    <p>
-                      Navíc mohou členové SWE navazovat kontakty s potenciálními zaměstnavateli díky osobnímu setkání na SWE akcích a kariérních veletrzích.
-                    </p>
-                  </div>
-                  <div class="col-auto p-3 article-text border-0">
-                    <h4 class="article-header">Světové akce</h4>
-                    <p>
-                      SWE každoročně pořádá až 30 různých událostí zahrnujících semináře, sympozia a konference po celém světě. Tyto akce na podporu profesionálního rozvoje se zaměřují na různorodé oblasti včetně náboru a udržení pracovníků.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
         <div class="main-content text-center page-divider" id="sheAward">
           <section class="section-content p-5">
             <h1 class="section-name border-bottom mb-4">SheAward</h1>
             <div class="container p-3">
               <div class="row justify-content-center">
                 <div class="article container shadow">
-                  <div class="d-flex justify-content-center text-center p-2">
+                  <div class="d-flex justify-content-center text-center p-3">
                     <h3 class="article-header">Soutěž SHE STEM Award 2024</h3>
                   </div>
                   <div class="p-2 container justify-content-center text-start article-content">

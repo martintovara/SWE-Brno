@@ -35,6 +35,13 @@ function swalFireMember(nb) {
     });
 }
 
+function setMarginMain() {
+    const main = document.getElementsByClassName("banner-div")[0];
+    const clientHeight = main.clientHeight;
+
+    document.getElementsByClassName("main")[0].style.margin = clientHeight + "px auto 0 auto";
+}
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
