@@ -20,7 +20,7 @@ const members = [{
     fullname: "Iveta Horrová",
     role: "Marketing Leader",
     img: "",
-    about: "<p>Our marketing leader./p>"
+    about: "<p>Our marketing leader.</p>"
 },
 {
     fullname: "Tereza Toufarová",
