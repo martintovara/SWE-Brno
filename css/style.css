@@ -235,9 +235,8 @@ h3 {
 
 .section-name {
     color: var(--main-color);
-    font-weight: bold;
     font-size: 33pt;
-    line-height: 80px;
+    line-height: 50px;
     font-family: "Kanit", sans-serif;
     font-weight: 300;
 }
@@ -293,6 +292,13 @@ h3 {
     align-items: center;
     flex-wrap: wrap;
     margin-top: 5px;
+}
+
+.hr-section {
+    width: 75%;
+    color: rgba(0, 0, 0, 0.3);
+    margin-left: 12.5% !important;
+    margin-right: 12.5% !important;
 }
 
 .hr-events {
